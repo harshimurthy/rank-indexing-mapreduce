@@ -1,7 +1,7 @@
 # Part 1 readings
 
 | Learn-to-rank algorithm | NDCG@10 on training data  | NDCG@10 on validation data | ERR@10 on test data  | NDCG@10 on test data |
-|----------|-------|-------|-------------------
+|----------|-------|-------|--------------- | ----------- |
 | LambdaMART   |  0.5351 |  0.5651 |  0.0959 | 0.5473 |
 | MART/GBRT  | 0.5002 |  0.5629 | 0.0955  | 0.5375 |
 | AdaRank   |  0.4669 | 0.5627  | 0.0996  | 0.5412 |
