@@ -1,5 +1,6 @@
 # Part 1 readings
 
+## Individual comparison
 | Learn-to-rank algorithm | NDCG@10 on training data  | NDCG@10 on validation data | ERR@10 on test data  | NDCG@10 on test data |
 |----------|-------|-------|--------------- | ----------- |
 | LambdaMART   |  0.5351 |  0.5651 |  0.0959 | 0.5473 |
@@ -8,6 +9,18 @@
 | RankBoost | 0.5039 | 0.5614 | 0.0973 | 0.5351 |
 | Linear Ccombination |  |   |    |  |
 
+## Overall Comparison
+
+
+------------------------------------------------------------------------
+baseline.ndcg.txt [baseline]	0.3503
+
+| System | Performance	| Improvement | Win |	Loss	| p-value |
+|----------|-------|-------|--------------- | ----------- | -------- |
+|m.ndcg.txt	|0.5375	|+0.1872 (+53.45%) |	98|	17|	0.0|
+|lm.ndcg.txt	|0.5473	|+0.197 (+56.25%)|	97|	17|	0.0|
+|ca.ndcg.txt	|0.5473	|+0.197 (+56.25%)|	97|	17|	0.0|
+|ab.ndcg.txt	|0.5412	|+0.1909 (+54.5%)|	93|	17|	0.0|
 
 ```
 java -jar RankLib-2.1-patched.jar
