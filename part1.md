@@ -17,8 +17,6 @@ baseline.ndcg.txt [baseline]	0.3503
 
 | System | Performance	| Improvement | Win |	Loss	| p-value |
 |----------|-------|-------|--------------- | ----------- | -------- |
-
-
 |rb.ndcg.txt(rankboost) |	0.5351 |	+0.1848 (+52.77%) |	96 |	17 |	0.0 |
 |m.ndcg.txt(MART)|	0.5375	|+0.1872 (+53.45%) |	98 |	17 |	0.0 |
 |lm.ndcg.txt(LambdaMART) |	0.5473	|+0.197 (+56.25%)	|97 |	17 |	0.0 |
