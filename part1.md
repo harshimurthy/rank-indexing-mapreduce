@@ -22,6 +22,11 @@ java -jar RankLib-2.1-patched.jar  -train train.txt -test test.txt -validate val
 java -jar RankLib-2.1-patched.jar -load mymodel.txt -test test.txt -metric2T NDCG@10
 
 
+java -jar bin/RankLib.jar -test test.txt -metric2T NDCG@10 -idv output/baseline.ndcg.txt
+
+java -cp RankLib-2.1-patched.jar ciir.umass.edu.eval.Analyzer -all output/ -base baseline.ndcg.txt > analysis.txt
+
+
 
 ```
 
