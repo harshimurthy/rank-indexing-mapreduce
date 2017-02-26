@@ -17,11 +17,12 @@ baseline.ndcg.txt [baseline]	0.3503
 
 | System | Performance	| Improvement | Win |	Loss	| p-value |
 |----------|-------|-------|--------------- | ----------- | -------- |
-|m.ndcg.txt (Mart)	|0.5375	|+0.1872 (+53.45%) |	98|	17|	0.0|
-|lm.ndcg.txt (LambdaMart)	|0.5473	|+0.197 (+56.25%)|	97|	17|	0.0|
-|ca.ndcg.txt (	|0.5473	|+0.197 (+56.25%)|	97|	17|	0.0|
-|ab.ndcg.txt	|0.5412	|+0.1909 (+54.5%)|	93|	17|	0.0|
 
+
+|rb.ndcg.txt(rankboost) |	0.5351 |	+0.1848 (+52.77%) |	96 |	17 |	0.0 |
+|m.ndcg.txt(MART)|	0.5375	|+0.1872 (+53.45%) |	98 |	17 |	0.0 |
+|lm.ndcg.txt(LambdaMART) |	0.5473	|+0.197 (+56.25%)	|97 |	17 |	0.0 |
+|ab.ndcg.txt (AdaRank) |	0.5412	|+0.1909 (+54.5%)	|93	| 17 |	0.0 |
 ```
 java -jar RankLib-2.1-patched.jar
 
