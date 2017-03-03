@@ -1,26 +1,30 @@
 # Part 1 readings
 
 ## Individual comparison
-| Learn-to-rank algorithm | NDCG@10 on training data  | NDCG@10 on validation data | ERR@10 on test data  | NDCG@10 on test data |
-|----------|-------|-------|--------------- | ----------- |
-| LambdaMART   |  0.5351 |  0.5651 |  0.0959 | 0.5473 |
-| MART/GBRT  | 0.5002 |  0.5629 | 0.0955  | 0.5375 |
-| AdaRank   |  0.4669 | 0.5627  | 0.0996  | 0.5412 |
-| RankBoost | 0.5039 | 0.5614 | 0.0973 | 0.5351 |
-| Linear Ccombination |  |   |    |  |
+
+### Fold 1
+| Learn-to-rank algorithm | NDCG@10 on training data  | NDCG@10 on validation data |  NDCG@10 on test data |
+|----------|-------|-------|----------- |
+| LambdaMART (6)   |  0.4633 |  0.4569 |  0.4569 |
+| MART/GBRT(0)  | 0.4589 | 0.4542  | 0.4421  |
+| AdaRank (3)  |  0.3397 | 0.3406  | 0.3348  |
+| RankBoost(2) | 0.3401 | 0.3378 | 0.3345 |
+| Linear Ccombination |  |   |    |  
 
 ## Overall Comparison
 
 
 ------------------------------------------------------------------------
-baseline.ndcg.txt [baseline]	0.3503
-
+Overall comparison
+------------------------------------------------------------------------
 | System | Performance	| Improvement | Win |	Loss	| p-value |
 |----------|-------|-------|--------------- | ----------- | -------- |
-|rb.ndcg.txt(rankboost) |	0.5351 |	+0.1848 (+52.77%) |	96 |	17 |	0.0 |
-|m.ndcg.txt(MART)|	0.5375	|+0.1872 (+53.45%) |	98 |	17 |	0.0 |
-|lm.ndcg.txt(LambdaMART) |	0.5473	|+0.197 (+56.25%)	|97 |	17 |	0.0 |
-|ab.ndcg.txt (AdaRank) |	0.5412	|+0.1909 (+54.5%)	|93	| 17 |	0.0 |
+baseline.ndcg.txt [baseline]    0.1739
+|lm.ndcg.txt   |  0.4452 | +0.2714 (+156.1%)    |   1710 |    189 |     0.0 |
+|mart.ndcg.txt  | 0.4421 | +0.2683 (+154.32%)    |  1715 |   190  |    0.0 |
+|adarank.ndcg.txt |       0.3348 | +0.1609 (+92.56%)     |  1521   | 369   |  0.0 |
+|rankboost.ndcg.txt |     0.3345 | +0.1606 (+92.4%)       | 1546   | 347   |  0.0 |
+
 ```
 java -jar RankLib-2.1-patched.jar
 
@@ -29,6 +33,8 @@ java -jar RankLib-2.1-patched.jar  -train train.txt -test test.txt -validate val
 java -jar RankLib-2.1-patched.jar  -train train.txt -test test.txt -validate vali.txt -ranker 0 -metric2t NDCG@10 -metric2T ERR@10 -save mymodel_mart.txt
 
 java -jar RankLib-2.1-patched.jar  -train train.txt -test test.txt -validate vali.txt -ranker 3 -metric2t NDCG@10 -metric2T ERR@10 -save mymodel_ada.txt
+
+java -jar RankLib-2.1-patched.jar  -train train.txt -test test.txt -validate vali.txt -ranker 2 -metric2t NDCG@10 -metric2T ERR@10 -save mymodel_rankboost.txt
 
 #NDCG@10 on test data
 java -jar RankLib-2.1-patched.jar -load mymodel.txt -test test.txt -metric2T NDCG@10
@@ -42,7 +48,7 @@ java -cp RankLib-2.1-patched.jar ciir.umass.edu.eval.Analyzer -all output/ -base
 
 ```
 
-        
+
 0: MART (gradient boosted regression tree) .
 1: RankNet
 
