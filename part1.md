@@ -11,6 +11,15 @@
 | RankBoost(2) | 0.3401 | 0.3378 | 0.3345 |
 | Linear Ccombination |  |   |    |  
 
+### Fold 2
+| Learn-to-rank algorithm | NDCG@10 on training data  | NDCG@10 on validation data |  NDCG@10 on test data |
+|----------|-------|-------|----------- |
+| LambdaMART (6)   |   |   |   |
+| MART/GBRT(0)  | 0.4537 | 0.439  | 0.4396  |
+| AdaRank (3)  |  0.3375 | 0.3337  | 0.3397  |
+| RankBoost(2) | 0.3423 | 0.3337 | 0.3316 |
+| Linear Ccombination |  |   |    | 
+
 ## Overall Comparison
 
 
