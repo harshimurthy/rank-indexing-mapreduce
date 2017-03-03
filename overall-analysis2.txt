@@ -1,0 +1,24 @@
+Reading output2/baseline2.ndcg.txt... 2001 ranked lists [Done]
+Reading output2/lm2.ndcg.txt... 2001 ranked lists [Done]
+Reading output2/mart2.ndcg.txt... 2001 ranked lists [Done]
+Reading output2/adarank2.ndcg.txt... 2001 ranked lists [Done]
+Reading output2/rankboost2.ndcg.txt... 2001 ranked lists [Done]
+
+
+Overall comparison
+------------------------------------------------------------------------
+System  Performance     Improvement     Win     Loss    p-value
+baseline2.ndcg.txt [baseline]   0.1818
+lm2.ndcg.txt    0.4461  +0.2643 (+145.34%)      1709    197     0.0
+mart2.ndcg.txt  0.4396  +0.2578 (+141.77%)      1705    203     0.0
+adarank2.ndcg.txt       0.3397  +0.1579 (+86.83%)       1511    390     0.0
+rankboost2.ndcg.txt     0.3316  +0.1498 (+82.39%)       1532    372     0.0
+
+
+Detailed break down
+------------------------------------------------------------------------
+        [ < -100%)      [-100%, -75%)   [-75%, -50%)    [-50%, -25%)    [-25%, 0%)      (0%, +25%]      (+25%, +50%]    (+50%, +75%]    (+75%, +100%]   ( > +100%]
+lm2.ndcg.txt    0       0       7       25      165     692     682     295     40      0
+mart2.ndcg.txt  0       0       6       25      172     698     706     272     29      0
+adarank2.ndcg.txt       0       0       6       30      354     924     455     121     11      0
+rankboost2.ndcg.txt     0       0       6       30      336     954     479     93      6       0
